@@ -11,6 +11,9 @@ importers:
       '@astrojs/react':
         specifier: ^4.1.5
         version: 4.1.5(@types/react-dom@19.0.3(@types/react@19.0.7))(@types/react@19.0.7)(jiti@1.21.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(terser@5.37.0)(yaml@2.7.0)
+      '@junobuild/analytics':
+        specifier: ^0.2.0
+        version: 0.2.0
       '@sanity/astro':
         specifier: ^3.1.9
         version: 3.1.9(@sanity/client@6.25.0)(@sanity/visual-editing@2.12.3(@sanity/client@6.25.0)(@sanity/types@3.70.0(@types/react@19.0.7)(debug@4.4.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(astro@5.1.7(jiti@1.21.7)(rollup@4.30.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sanity@3.70.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(typescript@5.7.3))
@@ -55,11 +58,11 @@ importers:
         specifier: ^5.1.3
         version: 5.1.4(astro@5.1.7(jiti@1.21.7)(rollup@4.30.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@junobuild/config':
-        specifier: ^0.0.17
-        version: 0.0.17
+        specifier: ^0.1.8
+        version: 0.1.8(zod@3.24.1)
       '@junobuild/vite-plugin':
-        specifier: ^0.0.19
-        version: 0.0.19(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))(vite@6.0.7(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
+        specifier: ^3.4.0
+        version: 3.4.0(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))(vite@6.0.7(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
       astro:
         specifier: ^5.0.3
         version: 5.1.7(jiti@1.21.7)(rollup@4.30.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
@@ -1268,6 +1271,9 @@ packages:
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
 
+  '@junobuild/analytics@0.2.0':
+    resolution: {integrity: sha512-GIG3UeN+YtoF+DO0S4Gvzfvd1jBPp554JLW0W04UOsxPM8hUk5/fxrqOYQWUuoy028Oa1gdSWLH9eWCHpJdrkg==}
+
   '@junobuild/config-loader@0.0.7':
     resolution: {integrity: sha512-STzBP5d6FeSUB6QW2rmNW8Noh8gQNuKZAUD1n2w84okj7szW1mQq71geoJUmS464pP0AcIpedtNPWcO5sN4SNQ==}
     peerDependencies:
@@ -1277,6 +1283,11 @@ packages:
   '@junobuild/config@0.0.17':
     resolution: {integrity: sha512-5ui4dRwR2TFwN4HX8Y65TVE3IQKVATJNgiyyJIv9wZIA1yT4HQOHxMlga06dHvuNC9Lrsl7srtuDU8Z7veEQ6A==}
 
+  '@junobuild/config@0.1.8':
+    resolution: {integrity: sha512-25FN9nh0X4cauAQx9JlnUAbC4ZIdAoAtqBhYLBORrGXybFRT+48ber7LoXpws4BF5N8//tH4PwCuvl+aRaOWAQ==}
+    peerDependencies:
+      zod: ^3
+
   '@junobuild/plugin-tools@0.0.11':
     resolution: {integrity: sha512-kRCQVy/rSQe23kckDJojHKuWXMDivSUG6HOx7qULF147KfrwbjQhLyyKMirV2zr6QwcRWSWrOflj8sC212VnDQ==}
 
@@ -1285,8 +1296,8 @@ packages:
     peerDependencies:
       '@dfinity/principal': ^2.1.3
 
-  '@junobuild/vite-plugin@0.0.19':
-    resolution: {integrity: sha512-wuQLrTca0vjZxcR+H1DAdvvdXfXBdipZREnUcbH/DaSXwEFXoQynvcOCZmzVfuVlNwF5gFHtuwG74DLetlwpMw==}
+  '@junobuild/vite-plugin@3.4.0':
+    resolution: {integrity: sha512-1444V4hUGIympqMFtsDcO6V4YpkyvNbv8DmOjnsPtqqATv+Q4n6PI96rQiamSIOHMTNIkzzbon6jgNTlK7XNyg==}
     peerDependencies:
       vite: '>=4.0.0'
 
@@ -3472,6 +3483,10 @@ packages:
   isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
 
+  isbot@5.1.27:
+    resolution: {integrity: sha512-V3W56Hnztt4Wdh3VUlAMbdNicX/tOM38eChW3a2ixP6KEBJAeehxzYzTD59JrU5NCTgBZwRt9lRWr8D7eMZVYQ==}
+    engines: {node: '>=18'}
+
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
@@ -3988,6 +4003,11 @@ packages:
 
   nanoid@5.0.9:
     resolution: {integrity: sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
+  nanoid@5.1.5:
+    resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -5216,6 +5236,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  ua-parser-js@1.0.40:
+    resolution: {integrity: sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==}
+    hasBin: true
+
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
@@ -5663,6 +5687,9 @@ packages:
 
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
+
+  web-vitals@4.2.4:
+    resolution: {integrity: sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==}
 
   webidl-conversions@7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
@@ -7128,6 +7155,13 @@ snapshots:
 
   '@juggle/resize-observer@3.4.0': {}
 
+  '@junobuild/analytics@0.2.0':
+    dependencies:
+      isbot: 5.1.27
+      nanoid: 5.1.5
+      ua-parser-js: 1.0.40
+      web-vitals: 4.2.4
+
   '@junobuild/config-loader@0.0.7(@junobuild/config@0.0.17)(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))':
     dependencies:
       '@babel/core': 7.26.0
@@ -7139,6 +7173,10 @@ snapshots:
       - supports-color
 
   '@junobuild/config@0.0.17': {}
+
+  '@junobuild/config@0.1.8(zod@3.24.1)':
+    dependencies:
+      zod: 3.24.1
 
   '@junobuild/plugin-tools@0.0.11(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))':
     dependencies:
@@ -7152,7 +7190,7 @@ snapshots:
     dependencies:
       '@dfinity/principal': 2.2.0
 
-  '@junobuild/vite-plugin@0.0.19(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))(vite@6.0.7(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
+  '@junobuild/vite-plugin@3.4.0(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))(vite@6.0.7(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
     dependencies:
       '@junobuild/plugin-tools': 0.0.11(@junobuild/utils@0.0.27(@dfinity/principal@2.2.0))
       vite: 6.0.7(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
@@ -9857,6 +9895,8 @@ snapshots:
 
   isarray@1.0.0: {}
 
+  isbot@5.1.27: {}
+
   isexe@2.0.0: {}
 
   isobject@3.0.1: {}
@@ -10652,6 +10692,8 @@ snapshots:
   nanoid@3.3.8: {}
 
   nanoid@5.0.9: {}
+
+  nanoid@5.1.5: {}
 
   neotraverse@0.6.18: {}
 
@@ -12166,6 +12208,8 @@ snapshots:
 
   typescript@5.7.3: {}
 
+  ua-parser-js@1.0.40: {}
+
   ufo@1.5.4: {}
 
   ultrahtml@1.5.3: {}
@@ -12523,6 +12567,8 @@ snapshots:
       defaults: 1.0.4
 
   web-namespaces@2.0.1: {}
+
+  web-vitals@4.2.4: {}
 
   webidl-conversions@7.0.0: {}
 

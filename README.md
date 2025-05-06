@@ -117,3 +117,11 @@ Before configuring the Sanity webhook, you need to obtain a GitHub token. See [A
 3. Save the webhook
 
 After saving the webhook, you should see the workflow run in the GitHub Actions section of the repository every time you publish some content on Sanity.
+
+### Set up Analytics
+
+We integrate [Juno Analytics](https://juno.build/docs/build/analytics) to track the traffic of the website.
+
+1. Create an Orbiter on Juno ([guide](https://juno.build/docs/build/analytics/setup#getting-started)). Copy the Orbiter ID once done.
+2. Uncomment the `orbiter` configuration in the [`juno.config.ts`](./juno.config.ts) file and update the `<your-orbiter-id>` with the new orbiter ID.
+3. (optional) Update the configuration of the analytics you want to track in the [`src/analytics.ts`](./src/analytics.ts) file (see Juno Analytics's [Optional Features](https://juno.build/docs/build/analytics/setup#optional-features)).

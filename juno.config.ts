@@ -1,12 +1,12 @@
 import { defineConfig } from "@junobuild/config";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   satellite: {
     id: "<your-satellite-id>",
     source: "dist",
     predeploy: [
       "rm -rf dist .sanity",
-      "pnpm build", // Build the Astro + Sanity website
+      `pnpm build --mode ${mode}`, // Build the Astro + Sanity website
       "pnpm sanity build dist/studio -y", // compile Sanity Studio manually
     ],
     storage: {
@@ -20,4 +20,8 @@ export default defineConfig({
       ],
     },
   },
-});
+  // Uncomment this section to enable Juno Analytics. See the README for more details.
+  // orbiter: {
+  //   id: "<your-orbiter-id>",
+  // },
+}));
