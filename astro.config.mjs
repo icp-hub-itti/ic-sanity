@@ -15,7 +15,7 @@ export const { SANITY_STUDIO_PROJECT_ID, SANITY_STUDIO_DATASET } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://itmdf-xiaaa-aaaal-ar3ca-cai.icp0.io",
+  site: "https://<your-satellite-id>.icp0.io", // or your custom domain
 
   output: "static",
 

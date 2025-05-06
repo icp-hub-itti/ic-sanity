@@ -90,7 +90,6 @@ Before configuring the Sanity webhook, you need to obtain a GitHub token. See [A
    - **URL**: `https://api.github.com/repos/<your-github-username>/<your-repo>/dispatches`
    - **Dataset**: choose on which datasets you want to trigger the deployment
    - **Trigger on**: Select all the available options: _Create_, _Update_, _Delete_
-   - **URL**: `https://<your-satellite-id>.icp0.io/.netlify/functions/sanity`
    - **Projection**:
 
      ```json
